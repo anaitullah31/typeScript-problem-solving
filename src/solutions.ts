@@ -38,17 +38,9 @@ const courses: Course[] = [
     { title: "Next.js Pro", students: 85, isPublished: true }
 ]
 
-getPopularCourses(courses, 80);
-
 function pluckValues<T, K extends keyof T>(items: T[], key: K): T[K][] {
     return items.map(item => item[key]);
 }
-
-const users = [
-    { id: 1, name: "Rakib", role: "Admin" },
-    { id: 2, name: "Sadia", role: "Editor" },
-    { id: 3, name: "Tariq", role: "Subscriber" }
-]
 
 class Employee {
     constructor(protected name: string, private baseSalary: number) { }
@@ -65,8 +57,6 @@ class Manager extends Employee {
         return `Manager of ${this.department}: ${this.name}`;
     }
 }
-
-const manager = new Manager("Rakib", 50000, "Engineering");
 
 async function validateAgeAsync(age: number): Promise<string> {
     return new Promise((resolve, reject) => {
