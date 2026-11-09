@@ -1,9 +1,7 @@
-// Problem 1:
 function multiplyValue(value: number, multiplier: number = 2): number {
     return value * multiplier
 }
 
-// Problem 2:
 function processInput(value: string | number | boolean): string | number {
     if (typeof value === 'string') {
         return value.trim().toLowerCase();
@@ -14,18 +12,15 @@ function processInput(value: string | number | boolean): string | number {
     return value ? "Active" : "Inactive";
 }
 
-// Problem 3:
 function formatCoordinate(coordinate: readonly [number, number, string]): string {
-    const [latitude, longitude, locationNam] = coordinate;
-    return `Location: ${locationNam} (${latitude}, ${longitude})`;
+    const [latitude, longitude, locationName] = coordinate;
+    return `Location: ${locationName} (${latitude}, ${longitude})`;
 }
 
-// Problem 4:
 function concatenateArrays<T>(...arrays: T[][]): T[] {
     return arrays.flat();
 }
 
-// Problem 5:
 interface Course {
     title: string;
     students: number;
@@ -45,7 +40,6 @@ const courses: Course[] = [
 
 getPopularCourses(courses, 80);
 
-// Problem 6:
 function pluckValues<T, K extends keyof T>(items: T[], key: K): T[K][] {
     return items.map(item => item[key]);
 }
@@ -56,7 +50,6 @@ const users = [
     { id: 3, name: "Tariq", role: "Subscriber" }
 ]
 
-// Problem 7:
 class Employee {
     constructor(protected name: string, private baseSalary: number) { }
     getDetails(): string {
@@ -75,7 +68,6 @@ class Manager extends Employee {
 
 const manager = new Manager("Rakib", 50000, "Engineering");
 
-// Problem 8:
 async function validateAgeAsync(age: number): Promise<string> {
     return new Promise((resolve, reject) => {
         if (age < 18) {
